@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Shop - Lawrence & Light Photography</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Lawrence & Light Photography</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Lawrence & Light Photography</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="services.html">Services</a>
-            <a href="shop.html" class="active">Shop</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">Lawrence & Light</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html" class="cart-button">🛒 Cart</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="shop-header">
-            <h2>Shop Our Prints</h2>
-            <p>Browse a curated collection of premium photography prints, available in multiple sizes and finishes.</p>
-        </section>
+  <main>
+    <h1>Print Shop</h1>
+    <div class="shop-grid">
+      <div class="item">
+        <img src="images/photo1.jpg" alt="Sunset Portrait">
+        <h3>Sunset Portrait</h3>
+        <p>$40 - 8x10 Print</p>
+        <button onclick="addToCart('Sunset Portrait', 40)">Add to Cart</button>
+      </div>
+      <div class="item">
+        <img src="images/photo2.jpg" alt="City Moment">
+        <h3>City Moment</h3>
+        <p>$35 - 5x7 Print</p>
+        <button onclick="addToCart('City Moment', 35)">Add to Cart</button>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </main>
 
-        <section class="product-gallery">
-            <div class="product">
-                <img src="images/photo1.jpg" alt="Landscape View"/>
-                <h3>Golden Canyon</h3>
-                <p>Sizes: 8x10, 16x20, 24x36</p>
-                <p>From $45</p>
-                <button onclick="location.href='checkout.html'">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/photo2.jpg" alt="City Nightlife"/>
-                <h3>Urban Nights</h3>
-                <p>Sizes: 12x16, 18x24</p>
-                <p>From $55</p>
-                <button onclick="location.href='checkout.html'">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/photo3.jpg" alt="Sunset Portrait"/>
-                <h3>Golden Hour</h3>
-                <p>Sizes: 11x14, 20x30</p>
-                <p>From $65</p>
-                <button onclick="location.href='checkout.html'">Add to Cart</button>
-            </div>
-        </section>
-    </main>
+  <footer>
+    <p>© 2025 Lawrence & Light Photography</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Lawrence & Light Photography. All rights reserved.</p>
-    </footer>
+  <script src="cart.js"></script>
 </body>
 </html>
