@@ -1,28 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawrence & Light Photography - Booking</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Lawrence & Light Photography</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Booking</h2>
-        <p>This is the Booking page of Lawrence & Light Photography.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Lawrence & Light Photography</p>
-    </footer>
-</body>
-</html>
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push({ name, price });
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(name + " added to cart!");
+}
+
+function displayCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItems = document.getElementById('cart-items');
+  const totalElem = document.getElementById('total');
+  cartItems.innerHTML = '';
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+    const div = document.createElement('div');
+    div.textContent = `${item.name} - $${item.price}`;
+    cartItems.appendChild(div);
+  });
+
+  totalElem.textContent = `Total: $${total}`;
+}
+
+function clearCart() {
+  localStorage.removeItem('cart');
+  displayCart();
+}
+
+if (document.getElementById('cart-items')) {
+  displayCart();
+}
