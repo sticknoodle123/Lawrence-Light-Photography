@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawrence & Light Photography</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Lawrence & Light Photography</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Capturing Light, Telling Stories</h2>
+    <p>Professional photography for moments that matter.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We specialize in creative, emotional, and timeless photography for weddings, portraits, and events. Based in the heart of the city, our team brings passion to every frame.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Sample 1" />
+      <img src="images/photo2.jpg" alt="Sample 2" />
+      <img src="images/photo3.jpg" alt="Sample 3" />
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Wedding Photography</li>
+      <li>Event Coverage</li>
+      <li>Portrait Sessions</li>
+      <li>Product Photography</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lawrence & Light Photography. All rights reserved.</p>
+  </footer>
+</body>
+</html>
