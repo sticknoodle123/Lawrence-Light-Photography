@@ -3,3 +3,18 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f
 header, footer { background: #012c4c; color: #fff; padding: 1rem; text-align: center; }
 nav a { margin: 0 1rem; color: #ffda44; text-decoration: none; }
 main { padding: 2rem; }
+.btn-primary {
+  display: inline-block;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #facc15;
+  color: black;
+}
