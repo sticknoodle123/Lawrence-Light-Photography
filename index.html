@@ -1,10 +1,34 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lawrence & Light Photography</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      background-color: #1e3a8a; /* Deep blue */
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #facc15; /* Gold on hover */
+      color: black;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,44 +47,15 @@
   </header>
 
   <main>
-      <section class="hero">
+    <section class="hero">
       <h1>Capturing Candid Beauty</h1>
       <p>We specialize in natural, heartfelt moments that last a lifetime.</p>
       <a href="booking.html" class="button">Book a Session</a>
     </section>
-    <section class="hero">
-      <h2>Candid Moments. Timeless Memories.</h2>
-      <p>We specialize in capturing people at their most genuine — unposed, unscripted, unforgettable.</p>
-      <a href="portfolio.html" class="button">View Portfolio</a>
-    </section>
-
-    <section class="highlights">
-      <div class="highlight">
-        <h3>Weddings & Engagements</h3>
-        <p>Documenting love stories in their rawest and most beautiful form.</p>
-        <a href="services.html#weddings">Learn More</a>
-      </div>
-      <div class="highlight">
-        <h3>Family & Lifestyle</h3>
-        <p>Preserve the warmth of everyday moments with a natural, candid approach.</p>
-        <a href="services.html#family">Learn More</a>
-      </div>
-      <div class="highlight">
-        <h3>Shop Fine Art Prints</h3>
-        <p>Bring the beauty of our work into your home or office space.</p>
-        <a href="shop.html">Visit Shop</a>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2>Ready to book your session?</h2>
-      <p>Let us help tell your story. Booking is simple and flexible to meet your needs.</p>
-      <a href="booking.html" class="button">Book Now</a>
-    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Lawrence & Light Photography | <a href="contact.html">Contact Us</a></p>
+    <p>© 2025 Lawrence & Light Photography</p>
   </footer>
 </body>
 </html>
