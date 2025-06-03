@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawrence & Light Photography - Testimonials</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Lawrence & Light Photography</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Testimonials</h2>
-        <p>This is the Testimonials page of Lawrence & Light Photography.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Lawrence & Light Photography</p>
-    </footer>
+  <header>
+    <div class="logo">Lawrence & Light</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <p id="total"></p>
+    <button onclick="clearCart()">Clear Cart</button>
+  </main>
+
+  <footer>
+    <p>© 2025 Lawrence & Light Photography</p>
+  </footer>
+
+  <script src="cart.js"></script>
 </body>
 </html>
