@@ -49,21 +49,24 @@
       transform: scale(1.05);
     }
 
-    .hero {
-      padding: 60px 20px;
-      background: url('hero-image.jpg') center/cover no-repeat;
-      color: white;
-      text-shadow: 1px 1px 4px black;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
     }
 
-    .hero h2 {
-      font-size: 2em;
+    .gallery img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    .hero p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 20px auto 0;
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -93,12 +96,25 @@
   <a href="booking.html" class="bubble">Book a Session</a>
   <a href="cart.html" class="bubble">Cart</a>
 </section>
-    <main>
-        <h2>Portfolio</h2>
-        <p>This is the Portfolio page of Lawrence & Light Photography.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Lawrence & Light Photography</p>
-    </footer>
+
+<main>
+  <h2>Portfolio</h2>
+  <p>Explore our gallery of candid, powerful moments captured by Lawrence & Light Photography.</p>
+
+  <div class="gallery">
+    <img src="photo4.jpg" alt="Candid moment 1">
+    <img src="photo5.jpg" alt="Candid moment 2">
+    <img src="photo6.jpg" alt="Candid moment 3">
+    <img src="photo7.jpg" alt="Candid moment 4">
+    <img src="photo8.jpg" alt="Candid moment 5">
+    <img src="photo9.jpg" alt="Candid moment 6">
+    <img src="photo10.jpg" alt="Candid moment 7">
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Lawrence & Light Photography</p>
+</footer>
+
 </body>
 </html>
