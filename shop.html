@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Shop - Lawrence & Light Photography</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Lawrence & Light Photography</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Lawrence & Light Photography</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="services.html">Services</a>
-            <a href="shop.html" class="active">Shop</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Lawrence & Light Photography</h1>
+  </header>
 
-    <main>
-        <section class="shop-header">
-            <h2>Shop Our Prints</h2>
-            <p>Browse a curated collection of premium photography prints, available in multiple sizes and finishes.</p>
-        </section>
+  <nav class="nav-bubbles">
+    <a class="bubble" href="index.html">Home</a>
+    <a class="bubble" href="about.html">About</a>
+    <a class="bubble" href="portfolio.html">Portfolio</a>
+    <a class="bubble" href="services.html">Services</a>
+    <a class="bubble" href="booking.html">Booking</a>
+    <a class="bubble" href="contact.html">Contact</a>
+    <a class="bubble" href="shop.html">Shop</a>
+    <a class="bubble" href="cart.html">Cart</a>
+  </nav>
 
-        <section class="product-gallery">
-            <div class="product">
-                <img src="images/photo1.jpg" alt="Landscape View"/>
-                <h3>Golden Canyon</h3>
-                <p>Sizes: 8x10, 16x20, 24x36</p>
-                <p>From $45</p>
-                <button onclick="location.href='checkout.html'">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/photo2.jpg" alt="City Nightlife"/>
-                <h3>Urban Nights</h3>
-                <p>Sizes: 12x16, 18x24</p>
-                <p>From $55</p>
-                <button onclick="location.href='checkout.html'">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/photo3.jpg" alt="Sunset Portrait"/>
-                <h3>Golden Hour</h3>
-                <p>Sizes: 11x14, 20x30</p>
-                <p>From $65</p>
-                <button onclick="location.href='checkout.html'">Add to Cart</button>
-            </div>
-        </section>
-    </main>
+  <main>
+    <h2 class="text-center">Shop Prints & Photo Packages</h2>
+    <div class="gallery">
+      <div>
+        <img src="images/photo1.jpg" alt="Sunset Portrait">
+        <h3>Sunset Portrait</h3>
+        <p>Size: 8x10 Print</p>
+        <p>Price: $25.00</p>
+        <button onclick="addToCart('Sunset Portrait', 25.00)">Add to Cart</button>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 Lawrence & Light Photography. All rights reserved.</p>
-    </footer>
+      <div>
+        <img src="images/photo2.jpg" alt="Family Laughing Moment">
+        <h3>Family Laughing Moment</h3>
+        <p>Size: 11x14 Print</p>
+        <p>Price: $35.00</p>
+        <button onclick="addToCart('Family Laughing Moment', 35.00)">Add to Cart</button>
+      </div>
+
+      <div>
+        <img src="images/photo3.jpg" alt="Engagement Candid">
+        <h3>Engagement Candid</h3>
+        <p>Digital Download</p>
+        <p>Price: $15.00</p>
+        <button onclick="addToCart('Engagement Candid', 15.00)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lawrence & Light Photography. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(item, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ item, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(item + " added to cart.");
+    }
+  </script>
 </body>
 </html>
-
