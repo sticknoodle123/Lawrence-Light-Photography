@@ -177,3 +177,33 @@ table.cart {
   margin: 0 auto;
   padding: 20px;
 }
+
+/* Testimonial Wheel */
+.testimonial-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
