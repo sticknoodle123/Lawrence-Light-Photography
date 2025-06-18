@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Lawrence & Light Photography</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .testimonial-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+    }
+
+    .testimonial {
+      font-style: italic;
+      font-size: 1.2rem;
+      display: none;
+    }
+
+    .testimonial.active {
+      display: block;
+    }
+
+    .testimonial-author {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lawrence & Light Photography</h1>
+  </header>
+
+  <nav class="nav-bubbles">
+    <a class="bubble" href="index.html">Home</a>
+    <a class="bubble" href="about.html">About</a>
+    <a class="bubble" href="portfolio.html">Portfolio</a>
+    <a class="bubble" href="services.html">Services</a>
+    <a class="bubble" href="booking.html">Booking</a>
+    <a class="bubble" href="contact.html">Contact</a>
+    <a class="bubble" href="shop.html">Shop</a>
+    <a class="bubble" href="cart.html">Cart</a>
+  </nav>
+
+  <main>
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        “Absolutely amazing photography! The candid moments captured were perfect.”
+        <div class="testimonial-author">– Sarah M.</div>
+      </div>
+      <div class="testimonial">
+        “Professional, creative, and reliable. Highly recommend Lawrence & Light.”
+        <div class="testimonial-author">– James R.</div>
+      </div>
+      <div class="testimonial">
+        “Every photo told a story. I couldn’t be happier with the results.”
+        <div class="testimonial-author">– Ana L.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lawrence & Light Photography</p>
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
