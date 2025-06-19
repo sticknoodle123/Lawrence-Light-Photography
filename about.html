@@ -34,15 +34,21 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 50px 30px;
+    .photo-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 20px;
     }
 
-    .photo-grid img {
+    .photo-block {
+      text-align: center;
+    }
+
+    .photo-block img {
       width: 100%;
+      max-width: 600px;
       height: auto;
       max-height: 400px;
       object-fit: cover;
@@ -51,9 +57,22 @@
       transition: transform 0.3s ease;
     }
 
-    .photo-grid img:hover {
+    .photo-block img:hover {
       transform: scale(1.05);
     }
+
+    .photo-label {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .photo-label.action { color: #E63946; }
+    .photo-label.couples { color: #F4A261; }
+    .photo-label.behind { color: #2A9D8F; }
+    .photo-label.outdoors { color: #264653; }
 
     .about-section {
       max-width: 900px;
@@ -101,11 +120,23 @@
       <p>Lawrence & Light Photography is more than just a business—it’s a storytelling experience. We specialize in candid, heartfelt imagery that reflects real emotions and genuine moments. From weddings and events to everyday portraits, our mission is to create work that feels timeless and deeply personal.</p>
     </section>
 
-    <section class="photo-grid">
-      <img src="images/photo21.jpg" alt="Photographer in action">
-      <img src="images/photo22.jpg" alt="Candid couple shoot">
-      <img src="images/photo23.jpg" alt="Behind the scenes">
-      <img src="images/photo24.jpg" alt="Outdoor lifestyle session">
+    <section class="photo-column">
+      <div class="photo-block">
+        <h4 class="photo-label action">Action</h4>
+        <img src="images/photo21.jpg" alt="Photographer in action">
+      </div>
+      <div class="photo-block">
+        <h4 class="photo-label couples">Couples</h4>
+        <img src="images/photo22.jpg" alt="Candid couple shoot">
+      </div>
+      <div class="photo-block">
+        <h4 class="photo-label behind">Behind the Scenes</h4>
+        <img src="images/photo23.jpg" alt="Behind the scenes">
+      </div>
+      <div class="photo-block">
+        <h4 class="photo-label outdoors">Outdoors</h4>
+        <img src="images/photo24.jpg" alt="Outdoor lifestyle session">
+      </div>
     </section>
 
     <section class="about-section">
