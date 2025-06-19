@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -29,6 +29,27 @@
     .testimonial-author {
       margin-top: 1rem;
       font-weight: bold;
+    }
+
+    .testimonial-controls {
+      margin-top: 1rem;
+    }
+
+    .testimonial-controls button {
+      background-color: #FFD700;
+      color: #1a1a1a;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .testimonial-controls button:hover {
+      background-color: #e6c200;
     }
   </style>
 </head>
@@ -64,6 +85,15 @@
         “Every photo told a story. I couldn’t be happier with the results.”
         <div class="testimonial-author">– Ana L.</div>
       </div>
+      <div class="testimonial">
+        “They made us feel completely at ease. The photos exceeded our expectations.”
+        <div class="testimonial-author">– Devin S.</div>
+      </div>
+
+      <div class="testimonial-controls">
+        <button id="prevTestimonial" aria-label="Previous testimonial">&larr; Previous</button>
+        <button id="nextTestimonial" aria-label="Next testimonial">Next &rarr;</button>
+      </div>
     </div>
   </main>
 
@@ -75,11 +105,26 @@
     const testimonials = document.querySelectorAll('.testimonial');
     let index = 0;
 
-    setInterval(() => {
-      testimonials[index].classList.remove('active');
+    const showTestimonial = (i) => {
+      testimonials.forEach(t => t.classList.remove('active'));
+      testimonials[i].classList.add('active');
+    };
+
+    document.getElementById('nextTestimonial').addEventListener('click', () => {
       index = (index + 1) % testimonials.length;
-      testimonials[index].classList.add('active');
-    }, 4000);
-  <script src="testimonials.js"></script>
+      showTestimonial(index);
+    });
+
+    document.getElementById('prevTestimonial').addEventListener('click', () => {
+      index = (index - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(index);
+    });
+
+    // Optional: auto-rotate every 8 seconds
+    setInterval(() => {
+      index = (index + 1) % testimonials.length;
+      showTestimonial(index);
+    }, 8000);
+  </script>
 </body>
 </html>
