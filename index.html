@@ -3,8 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop - Lawrence & Light Photography</title>
+  <title>Lawrence & Light Photography</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background: url('images/photoHero.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .hero h2, .hero p, .hero a {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #FFD700;
+      color: #1a1a1a;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e6c200;
+    }
+
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .highlight {
+      flex: 1 1 280px;
+      background-color: #f2f2f2;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .highlight:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight h3 {
+      color: #005f73;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta a.button {
+      background-color: white;
+      color: #005f73;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,7 +132,7 @@
     <a class="bubble" href="cart.html">Cart</a>
   </nav>
 
- <main>
+  <main>
     <section class="hero">
       <h2>Candid Moments. Timeless Memories.</h2>
       <p>We specialize in capturing people at their most genuine — unposed, unscripted, unforgettable.</p>
@@ -34,17 +143,17 @@
       <div class="highlight">
         <h3>Weddings & Engagements</h3>
         <p>Documenting love stories in their rawest and most beautiful form.</p>
-        <a href="services.html#weddings">Learn More</a>
+        <a href="services.html#weddings" class="button">Learn More</a>
       </div>
       <div class="highlight">
         <h3>Family & Lifestyle</h3>
         <p>Preserve the warmth of everyday moments with a natural, candid approach.</p>
-        <a href="services.html#family">Learn More</a>
+        <a href="services.html#family" class="button">Learn More</a>
       </div>
       <div class="highlight">
         <h3>Shop Fine Art Prints</h3>
         <p>Bring the beauty of our work into your home or office space.</p>
-        <a href="shop.html">Visit Shop</a>
+        <a href="shop.html" class="button">Visit Shop</a>
       </div>
     </section>
 
@@ -55,9 +164,8 @@
     </section>
   </main>
 
-<footer>
-  <p>&copy; 2025 Lawrence & Light Photography. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Lawrence & Light Photography. All rights reserved.</p>
+  </footer>
 </body>
 </html>
