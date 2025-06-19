@@ -5,6 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - Lawrence & Light Photography</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero-about {
+      background: linear-gradient(to right, #005f73, #0a9396);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero-about h2 {
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero-about p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .about-section h3 {
+      color: #005f73;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .about-section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,12 +83,27 @@
   </nav>
 
   <main>
-    <h2>About</h2>
-    <p>Lawrence & Light Photography is more than just a photography business—it’s a storytelling experience. Founded on a passion for capturing life’s most authentic and spontaneous moments, we specialize in candid photography that reveals genuine emotion and personality. Whether it’s a couple laughing in the golden hour or a child’s first steps, we strive to preserve the real moments that make life beautiful.</p>
+    <section class="hero-about">
+      <h2>Behind the Lens</h2>
+      <p>Capturing life in its most authentic light, one moment at a time.</p>
+    </section>
 
-    <p>Our team brings a professional yet personal approach to every project, ensuring that every client feels comfortable, seen, and valued. With an eye for detail and a commitment to creativity, we transform everyday memories into timeless works of art. From portraits and events to lifestyle shoots and digital prints, we offer a wide range of services tailored to meet your needs.</p>
+    <section class="about-section">
+      <h3>Who We Are</h3>
+      <p>Lawrence & Light Photography is more than just a business—it’s a storytelling experience. We specialize in candid, heartfelt imagery that reflects real emotions and genuine moments. From weddings and events to everyday portraits, our mission is to create work that feels timeless and deeply personal.</p>
+    </section>
 
-    <p>At Lawrence & Light, we believe that every photo should feel like a warm memory. Let us help you tell your story—beautifully, honestly, and with light.</p>
+    <section class="photo-grid">
+      <img src="images/about1.jpg" alt="Photographer in action">
+      <img src="images/about2.jpg" alt="Candid couple shoot">
+      <img src="images/about3.jpg" alt="Behind the scenes">
+      <img src="images/about4.jpg" alt="Outdoor lifestyle session">
+    </section>
+
+    <section class="about-section">
+      <h3>Our Promise</h3>
+      <p>We believe photography should never feel forced or staged. Our goal is to make you feel completely at ease so we can capture you at your most authentic. Whether it’s golden hour light, spontaneous laughter, or intimate moments, we make sure every shot tells a story that matters to you.</p>
+    </section>
   </main>
 
   <footer>
